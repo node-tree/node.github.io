@@ -9,9 +9,10 @@ function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent('sketch');
   
+
   button = createImg('./SVG/text1.svg');
   
-  for (i = 0; i < 35; i++) {
+  for (i = 0; i < 30; i++) {
     balls.push(new Ball(
   
       createVector(width/2,height/2),

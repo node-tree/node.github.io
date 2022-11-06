@@ -17,7 +17,6 @@ function setup(){
 function draw(){
   background(65,105,165);
   
-  
   button.position(width*0.4,height*0.3);
   button.size(scale,scale);
   button.mousePressed(gotolink);
@@ -32,7 +31,7 @@ function draw(){
 }
 
 function gotolink(){
-  window.open('index3.html');
+  window.location.href = 'index3.html';
 }                
 function windowResized(){
   resizeCanvas(windowWidth,windowHeight);
