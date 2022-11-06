@@ -9,7 +9,7 @@ function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent('sketch');
 
-  button = createImg('SVG/text1.svg');
+  button = createImg('https://nodetree.speedgabia.com/what/w2.png');
   
   for (i = 0; i < 30; i++) {
     balls.push(new Ball(
