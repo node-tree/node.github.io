@@ -6,7 +6,7 @@ let ball = [];
 function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent('sketch3');
-  img = loadImage('/SVG/Asset 6.svg');
+  img = loadImage('./SVG/Asset 6.svg');
   
   
 }
