@@ -11,7 +11,7 @@ function setup(){
   
   button = createImg('node.github.io/text1.svg');
   
-  for (i = 0; i < 30; i++) {
+  for (i = 0; i < 35; i++) {
     balls.push(new Ball(
   
       createVector(width/2,height/2),
