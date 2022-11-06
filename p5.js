@@ -9,7 +9,7 @@ function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent('sketch');
   
-  button = createImg('node-tree/node.github.io/SVG/text1.svg');
+  button = createImg('text1.svg');
   
   for (i = 0; i < 35; i++) {
     balls.push(new Ball(
@@ -17,7 +17,7 @@ function setup(){
       createVector(width/2,height/2),
       p5.Vector.random2D().mult(random(10)),
       random(10,50),
-      color(255,255,23)
+      color(255,255,123)
       
     ));
   }
