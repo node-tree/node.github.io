@@ -8,12 +8,12 @@ let scale = 300;
 function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent('sketch');
-
+  
   button = createImg('/SVG/text1.svg');
   
   for (i = 0; i < 30; i++) {
     balls.push(new Ball(
-
+  
       createVector(width/2,height/2),
       p5.Vector.random2D().mult(random(10)),
       random(10,50),
@@ -25,7 +25,7 @@ function setup(){
 
 function draw(){
   background(65,105,165);
-
+  
   for(let i = 0; i < balls.length; i++) {
     for(let j = 0; j < i; j++) {
       balls[i].collide(balls[j]);
@@ -46,7 +46,7 @@ function draw(){
 }
 
 function gotolink(){
-
+  // window.open('index2.html');
   window.location.href = 'index2.html';
 }                
 function change(){

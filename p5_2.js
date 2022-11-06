@@ -6,8 +6,8 @@ let scale = 300;
 function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent('sketch2');
-  img = loadImage('/SVG/text1.svg');
-  button = createImg('/SVG/text1.svg');
+  
+  button = createImg('./SVG/text1.svg');
 
   for(let i = 0;i<100;i++){
   ball.push(new Ball());
@@ -16,7 +16,7 @@ function setup(){
 
 function draw(){
   background(65,105,165);
-  // image(img,10,10,img.width*2,img.height*2);
+  
   
   button.position(width*0.4,height*0.3);
   button.size(scale,scale);
