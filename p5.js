@@ -17,7 +17,7 @@ function setup(){
       createVector(width/2,height/2),
       p5.Vector.random2D().mult(random(10)),
       random(10,50),
-      color(255,255,123)
+      color(255,255,23)
       
     ));
   }
