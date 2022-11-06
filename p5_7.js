@@ -6,8 +6,8 @@ let scale = 300;
 function setup(){
   var canvas = createCanvas(980,500);
   canvas.parent('sketch7');
-  img = loadImage('/SVG/text1.svg');
-  button = createImg('/SVG/text1.svg');
+
+  button = createImg('./SVG/text1.svg');
   
   for (i = 0; i < 30; i++) {
     balls.push(new Ball(
@@ -22,7 +22,7 @@ function setup(){
 
 function draw(){
   background(65,105,165);
-  // image(img,10,10,img.width*2,img.height*2);
+
   for(let i = 0; i < balls.length; i++) {
     for(let j = 0; j < i; j++) {
       balls[i].collide(balls[j]);
