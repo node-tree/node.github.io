@@ -9,7 +9,7 @@ let wh = 1;
 function setup(){
   var canvas = createCanvas(windowWidth,3840);
   canvas.parent('sketch9');
-  img = loadImage('/SVG/p9.svg');
+  img = loadImage('./SVG/p9.svg');
   pos1Y = 100;
   pos2Y = 100;
 }
