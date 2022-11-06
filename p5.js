@@ -11,7 +11,7 @@ function setup(){
 
   button = createImg('https://nodetree.speedgabia.com/what/w2.png');
   
-  for (i = 0; i < 30; i++) {
+  for (i = 0; i < 300; i++) {
     balls.push(new Ball(
 
       createVector(width/2,height/2),
