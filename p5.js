@@ -10,11 +10,10 @@ function setup(){
   canvas.parent('sketch');
   
 
-  button = createImg('./SVG/testPng.png');
+  button = createImg('./SVG/text1.png');
   
   for (i = 0; i < 30; i++) {
     balls.push(new Ball(
-  
       createVector(width/2,height/2),
       p5.Vector.random2D().mult(random(10)),
       random(10,50),
