@@ -11,9 +11,9 @@ function preload() {
 }
 
 function setup() {
-  var canvas = createCanvas(windowWidth,windowHeight*0.34);
+  var canvas = createCanvas(windowWidth,windowHeight*0.35);
   canvas.parent('sketch7');
-  sound_bg = createAudio('bx-spring.mp3');
+  sound_bg = createAudio('./zigle.wav');
   
   // 폰트 설정
   textFont(font);

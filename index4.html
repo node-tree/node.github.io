@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-            
+       
         <script>
             var audio = new Audio('./korea.mp3');
             var audio2 = new Audio('./english.mp3');
@@ -51,8 +51,11 @@
             var audio4 = new Audio('./greece.mp3');
             var sound_bg = new Audio('./kick_hihat_clab_rim.wav');
             var sound_click = new Audio('./click.wav');
-            sound_bg.loop = true;
+            
             sound_bg.play();
+            
+            sound_bg.loop = true;
+            
             $('#i1').on('click',function(){
                 audio.play();
             })
@@ -71,6 +74,7 @@
             $('#i6').mouseover(function(){
                 sound_click.play();
             })
+            
         </script>
 
     </body>

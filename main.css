@@ -1,3 +1,8 @@
+#nav{
+    margin-top: 100px;
+}
+
+
 /* index3 */
 .p3_background{
     background-color: #4169a5;
@@ -183,6 +188,6 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    bottom: 560px;
+    bottom: 680px;
     
 }

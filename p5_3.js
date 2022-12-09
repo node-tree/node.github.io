@@ -103,7 +103,8 @@ p.draw = function() {
 
   if (p.mouse.x > sprs[i].x && p.mouse.x < sprs[i].x + sprs[i].width && p.mouse.y > sprs[i].y && p.mouse.y < sprs[i].y + sprs[i].height && p.mouse.pressing()) {
     click_sound.play();
-    window.location.href = 'index4.html';
+    window.location.href = 'index.html';//네모
+    
   }
   if (p.mouse.x > sprs2[i].x && p.mouse.x < sprs2[i].x + sprs2[i].width && p.mouse.y > sprs2[i].y && p.mouse.y < sprs2[i].y + sprs2[i].height && p.mouse.pressing()) {
     click_sound.play();
@@ -111,11 +112,11 @@ p.draw = function() {
   }
   if (p.mouse.x > sprs3[i].x && p.mouse.x < sprs3[i].x + sprs3[i].width && p.mouse.y > sprs3[i].y && p.mouse.y < sprs3[i].y + sprs3[i].height && p.mouse.pressing()) {
     click_sound.play();
-    window.location.href = 'index6.html';
+    window.location.href = 'index7.html';
   }
   if (p.mouse.x > sprs4[i].x && p.mouse.x < sprs4[i].x + sprs4[i].width && p.mouse.y > sprs4[i].y && p.mouse.y < sprs4[i].y + sprs4[i].height && p.mouse.pressing()) {
     click_sound.play();
-    window.location.href = 'index7.html';
+    window.location.href = 'index6.html';
   }
 }
 

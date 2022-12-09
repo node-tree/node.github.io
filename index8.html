@@ -22,9 +22,10 @@
       <div class="container"></div>
         <div class="row">
             <div class="col-md-6">
-                <a href = "https://mannanda.notion.site" target = "_blank"><img class = "p8img" src="./SVG/tool2.png"/></a> 
+                
+                <a href = "https://smartstore.naver.com/saengsanso" target = "_blank"><img class = "p8img" src="./SVG/tool2.png"/></a> 
                 <img class = "p8img2" src="./SVG/p8_1.svg"/>
-                <a href="http://nodetree.kr" target = "blank_" class = "p8text"><p>[2022]</p></a>
+                <a href="https://mannanda.notion.site" target = "blank_" class = "p8text"><p>[2022]</p></a>
                 </img>
                 
             </div>
@@ -35,17 +36,27 @@
                 </img>
             </div>
         </div>
+       
         <script>
             var sound = new Audio('./kick_hihat_clab_rim_hi.wav');
             var sound_click = new Audio('./click.wav');
-            sound.loop = true;
             sound.play();
+            
+            sound.loop = true;
+
+            
+            
             $('.p8text').mouseover(function(){
                 sound_click.play();
             })
             $('.p8img').mouseover(function(){
                 sound_click.play();
             })
+            $('.p8_title').on('click',function(){
+                location.href = 'index4.html'
+            })
+
+            
 
         </script>
     </body>

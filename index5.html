@@ -60,46 +60,27 @@
                 </div>
             </div>
             <div class="row">
+                <div class=" col-lg-2">
+                    <!-- <img src="/SVG/about.svg" width="100%"> -->
+                </div>
+            
+            
                 <div class="col-lg-2">
                     <!-- <img src="/SVG/about.svg" width="100%"> -->
                 </div>
-                <div class=" col-lg-2">
+                <div class="col-lg-2">
                     <!-- <img src="/SVG/about.svg" width="100%"> -->
                 </div>
-            
-            
-                <div class=" col-lg-2">
+                <div class="col-lg-2">
                     <!-- <img src="/SVG/about.svg" width="100%"> -->
                 </div>
-                <div class=" col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
-                </div>
-                <div class=" col-lg-2">
+                <div class="col-lg-2">
                     <!-- <img src="/SVG/about.svg" width="100%"> -->
                 </div>
             </div>
-            <div class="row">
-                <div class=" col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
-                </div>
-                <div class=" col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
-                </div>
-                <div class=" col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
-                </div>
-                <div class=" col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
-                </div>
-                <div class=" col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
-                </div>
-
-            </div>
-            
         </div>
         
-    
+        
         <script>
             var sound_bg = new Audio('./kick_hihat_clab_rim_hi.wav');
             var sound_open = [];
@@ -111,9 +92,10 @@
             sound_open[5] = new Audio('./la.wav');
             sound_open[6] = new Audio('./si.wav');
             var sound_close = new Audio('./click.wav');
-            sound_bg.loop = true;
             sound_bg.play();
-
+            
+            sound_bg.loop = true;
+            
             $('#img1').on('click',function(){
                 $('.description').html('20220526 Thu PM 3:12 세계문화예술교육주간 <회복과 전환을 위한 일상의 힘 발견> in 부여');
                 $('.black-bg').addClass('show-modal');
@@ -141,6 +123,8 @@
             $('#logo').on('click',function(){
                 location.href = 'index6.html';
             })
+
+           
         </script>
     </body>
 </html>

@@ -9,13 +9,10 @@ var t = function(p){
 p.setup = function() {
     p.createCanvas(p.windowWidth, p.windowHeight); 
     click_sound = p.createAudio('./click.wav');
-    sound = p.loadSound('bx-spring.mp3');
+    sound = p.loadSound('./rocket.wav');
     sound_bg2 = p.createAudio('./morse.wav'); ;
     sound_bg = p.createAudio('./kick_hihat_clab_rim_hi.wav');
     
-    sound_bg.loop();
-    sound_bg2.loop();
-
     sound_bg2.play();
     sound_bg.play();
     
@@ -30,11 +27,14 @@ p.setup = function() {
     star.maxSpeed = 2;
     
     p.world.gravity.y = -5;
-    
 }
 
 p.draw = function() {
+  
+
   p.clear();
+  sound_bg.loop();
+  sound_bg2.loop();
   p.background(65,105,165);
   gif.position(500,400);
   gif.size(1920*0.5,1080*0.5);
