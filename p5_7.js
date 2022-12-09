@@ -4,6 +4,7 @@ let message = '색채',
   fontsize = 60,
   x,
   y; // 텍스트의 x 와 y 좌표
+let sound;
 
 function preload() {
   font = loadFont('DungGeunMo.ttf');
@@ -12,8 +13,8 @@ function preload() {
 function setup() {
   var canvas = createCanvas(windowWidth,windowHeight*0.34);
   canvas.parent('sketch7');
+  sound_bg = createAudio('bx-spring.mp3');
   
-
   // 폰트 설정
   textFont(font);
   textSize(fontsize);
@@ -28,10 +29,10 @@ function draw() {
   background(65,105,165);  
 
   // 텍스트를 검정색으로 쓰고, 그 바운딩 박스 받아오기
-  fill(0);
+  fill(random(0,255),random(0,255),random(0,255));
   text(message, x, y);
   bounds = font.textBounds(message, x, y, fontsize);
-
+  
   // 마우스가 바운딩 박스 안에 있는지 확인하고, 안에 있다면 간질간질!
   if (
     mouseX >= bounds.x &&
@@ -39,6 +40,7 @@ function draw() {
     mouseY >= bounds.y &&
     mouseY <= bounds.y + bounds.h
   ) {
+    sound_bg.play();
     x += random(-5, 5);
     y += random(-5, 5);
   }

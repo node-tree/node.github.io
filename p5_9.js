@@ -31,14 +31,14 @@ function draw(){
   endShape();
 
 
-  stroke(0);
-  fill(255,255,23); 
+  // stroke(0);
+  // fill(255,255,23); 
   
-  rect(width*0.5, pos1Y, 300, 700);
-  rect(width*0.7, pos2Y, 300, 700);
-  circle(width*0.575,200,150,150);
-  circle(width*0.775,200,150,150);
-  circle(width*0.673,600,150,150);
+  // rect(width*0.5, pos1Y, 300, 700);
+  // rect(width*0.7, pos2Y, 300, 700);
+  // circle(width*0.575,200,150,150);
+  // circle(width*0.775,200,150,150);
+  // circle(width*0.673,600,150,150);
   if(width<550){
     pos2Y = 900;
     wh = 2;

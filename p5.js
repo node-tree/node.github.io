@@ -1,16 +1,20 @@
 
-
 let img;
-var button;        
+var button;
 let balls = [];
 let scale = 300;
+let sound_bg;
+let sound;
 
 function setup(){
   var canvas = createCanvas(windowWidth,windowHeight);
   canvas.parent('sketch');
+  sound = createAudio('./click.wav');
+  sound_bg = createAudio('./kick.wav');
+  img = loadImage('./SVG/text1.png');
+  button = new Button(100,0,img);
   
-
-  button = createImg('./SVG/text1.png');
+  sound_bg.play();
   
   for (i = 0; i < 30; i++) {
     balls.push(new Ball(
@@ -25,7 +29,7 @@ function setup(){
 
 function draw(){
   background(65,105,165);
-  
+  sound_bg.loop();
   for(let i = 0; i < balls.length; i++) {
     for(let j = 0; j < i; j++) {
       balls[i].collide(balls[j]);
@@ -36,25 +40,12 @@ function draw(){
     balls[i].move();
     balls[i].render();
   }
-  
-  button.position(100,0);
-  button.mouseOver(change);
-  button.mouseOut(origin);
-  button.size(scale,scale);
-  button.mouseClicked(gotolink);
-  
+  button.display();
 }
 
 function gotolink(){
-  // window.open('index2.html');
   window.location.href = 'index2.html';
 }                
-function change(){
-    scale = 330;
-}
-function origin(){
-  scale = 300;
-}
 
 function windowResized(){
   resizeCanvas(windowWidth,windowHeight);
@@ -111,4 +102,50 @@ class Ball {
     fill(this.color);
     ellipse(this.pos.x, this.pos.y, this.radius*2);
   }
+}
+
+class Button {
+  
+  constructor(inX, inY, inImg) {
+    this.x = inX;
+    this.y = inY;
+    this.img = inImg;
+  }
+  
+  display() {
+    stroke(0);
+    
+    // tint the image on mouse hover
+    if (this.over()) {
+      tint(204, 0, 128);
+      sound.play();
+    } else {
+      noTint();
+    }
+    if(this.click()){
+      window.location.href = 'index2.html';
+    }
+    
+    
+    image(this.img, this.x, this.y);
+  }
+  
+    
+  // over automatically matches the width & height of the image read from the file
+  // see this.img.width and this.img.height below
+  over() {
+    if (mouseX > this.x && mouseX < this.x + this.img.width && mouseY > this.y && mouseY < this.y + this.img.height) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  click(){
+      if (mouseX > this.x && mouseX < this.x + this.img.width && mouseY > this.y && mouseY < this.y + this.img.height && mouseIsPressed === true) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  
 }

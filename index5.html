@@ -9,28 +9,32 @@
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
-    
-    
     </head>
     
-    <body bgcolor="#AABB00">
+    <body>
+        <div class="black-bg">
+            <div class="white-bg">
+                <p class="description">test</p>
+                <button class="btn btn-danger" id="close">닫기</button>
+            </div>
+        </div>
+
         <div class="p5_title">
-        <img src="/SVG/color-panorama.png">
+        <img id="logo" src="/SVG/color-panorama.png">
         </div>
         <div class="container" id="p5">
             <div class="row">
                 <div class="col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
+                    <img id = "img1" src="https://nodetree.speedgabia.com/ddcstorage/1.JPG" width="100%" height="100%">
                 </div>
                 <div class="col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
+                    <img id = "img2" src="https://nodetree.speedgabia.com/ddcstorage/2.JPG" width="100%" height="100%">
                 </div>
                 <div class="col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
+                    <img id = "img3" src="https://nodetree.speedgabia.com/ddcstorage/3.JPG" width="100%" height="100%">
                 </div>
                 <div class="col-lg-2">
-                    <!-- <img src="/SVG/about.svg" width="100%"> -->
+                    <img id = "img4" src="https://nodetree.speedgabia.com/ddcstorage/4.JPG" width="100%" height="100%">
                 </div>
                 <div class="col-lg-2">
                     <!-- <img src="/SVG/about.svg" width="100%"> -->
@@ -94,6 +98,49 @@
             </div>
             
         </div>
+        
+    
+        <script>
+            var sound_bg = new Audio('./kick_hihat_clab_rim_hi.wav');
+            var sound_open = [];
+            sound_open[0] = new Audio('./do.wav');
+            sound_open[1] = new Audio('./re.wav');
+            sound_open[2] = new Audio('./mi.wav');
+            sound_open[3] = new Audio('./pa.wav');
+            sound_open[4] = new Audio('./sol.wav');
+            sound_open[5] = new Audio('./la.wav');
+            sound_open[6] = new Audio('./si.wav');
+            var sound_close = new Audio('./click.wav');
+            sound_bg.loop = true;
+            sound_bg.play();
 
+            $('#img1').on('click',function(){
+                $('.description').html('20220526 Thu PM 3:12 세계문화예술교육주간 <회복과 전환을 위한 일상의 힘 발견> in 부여');
+                $('.black-bg').addClass('show-modal');
+                sound_open[0].play();
+            })
+            $('#img2').on('click',function(){
+                $('.description').html('20220526 Thu PM 3:15 세계문화예술교육주간 <회복과 전환을 위한 일상의 힘 발견> in 부여');
+                $('.black-bg').addClass('show-modal');
+                sound_open[1].play();
+            })
+            $('#img3').on('click',function(){
+                $('.description').html('20220526 Thu PM 3:19 세계문화예술교육주간 <회복과 전환을 위한 일상의 힘 발견> in 부여');
+                $('.black-bg').addClass('show-modal');
+                sound_open[2].play();
+            })
+            $('#img4').on('click',function(){
+                $('.description').html('20220526 Thu PM 3:20 세계문화예술교육주간 <회복과 전환을 위한 일상의 힘 발견> in 부여');
+                $('.black-bg').addClass('show-modal');
+                sound_open[3].play();
+            })
+            $('#close').on('click',function(){
+                $('.black-bg').removeClass('show-modal');
+                sound_close.play();
+            })
+            $('#logo').on('click',function(){
+                location.href = 'index6.html';
+            })
+        </script>
     </body>
 </html>

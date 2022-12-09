@@ -4,37 +4,49 @@
        <meta charset="uft-8"> 
        <title>일상색채수집보관함</title>
        <link rel="stylesheet" href="./main.css">
-       <!-- CSS only -->
+    
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
         crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
-        <script src="p5_7.js"></script>
-    
+        <!-- <script src="p5_7.js"></script> -->
     
     </head>
     
-    <body bgcolor="#AABB00">
+    <body>
       <div class="p8_title">
             <img src="/SVG/tool.png">
       </div>
       <div class="container"></div>
         <div class="row">
             <div class="col-md-6">
-                <a href = "index7.html"><img class = "p8img" src="./SVG/tool2.png"/></a> 
+                <a href = "https://mannanda.notion.site" target = "_blank"><img class = "p8img" src="./SVG/tool2.png"/></a> 
                 <img class = "p8img2" src="./SVG/p8_1.svg"/>
-                <a href="http://nodetree.kr"><p class="p8text">[2021]</p></a>
+                <a href="http://nodetree.kr" target = "blank_" class = "p8text"><p>[2022]</p></a>
                 </img>
-                <!-- <div id="sketch7"></div> -->
+                
             </div>
             <div class="col-md-6">                
-                <a href = "index7.html"><img class = "p8img" src = "./SVG/tool3.png"></a>
+                <a href = "#"><img class = "p8img" src = "./SVG/tool3.png"></a>
                 <img class = "p8img2" src = "./SVG/p8_2.svg">
-                <a href="http://nodetree.kr"><p class="p8text">[2023]</p></a>
+                <a href="#" class = "p8text"><p>[2023 준비중]</p></a>
                 </img>
             </div>
         </div>
+        <script>
+            var sound = new Audio('./kick_hihat_clab_rim_hi.wav');
+            var sound_click = new Audio('./click.wav');
+            sound.loop = true;
+            sound.play();
+            $('.p8text').mouseover(function(){
+                sound_click.play();
+            })
+            $('.p8img').mouseover(function(){
+                sound_click.play();
+            })
+
+        </script>
     </body>
 </html>
