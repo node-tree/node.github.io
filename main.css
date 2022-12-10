@@ -170,11 +170,14 @@
     background-position : center;
     padding: 10px;
 }  
+.p9Text:hover{
+    background-color: red;
+}
 .p9Text{
     position: relative;
     text-align: center;
     size: 30px;
-    bottom: 700px;
+    bottom: 730px;
     color: black;   
     display: block;
     margin-left: auto;
@@ -188,6 +191,5 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    bottom: 680px;
-    
+    bottom: 730px;
 }
